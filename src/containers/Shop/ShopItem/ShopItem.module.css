@@ -1,0 +1,137 @@
+.ShopItemWrapper{
+    width: 20%;
+    height: 70vh;
+    margin: 2rem auto;
+    position: relative;
+    padding: 15px 20px;
+    perspective: 150rem;
+}
+
+.ShopItem,
+.BackShopItem{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    margin: 2rem auto;
+    padding: 20px;
+    text-align: center;
+    box-shadow:0 10px 20px #888888;
+    border-radius: 4px;
+    position: absolute;
+    top:0;
+    left:0;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    background-color: white;
+    color:#ff7730;
+}
+
+.ShopItem{
+    transform: rotateY(0);
+    transition: all 1s ease;
+}
+
+.BackShopItem{
+    transform: rotateY(180deg);
+    transition: all 1s ease;
+}
+
+.ShopItemWrapper:hover .ShopItem{
+    transform: rotateY(-180deg);
+}
+
+.ShopItemWrapper:hover .BackShopItem{
+    transform: rotateY(0);
+}
+
+
+.Price{
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+.Button{
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #ff7730;
+    border: 1px solid #ff7730;
+    display: inline-block;
+    width: fit-content;
+    margin: auto;
+    padding: 15px;
+    box-sizing: border-box;
+    font-weight: bold;
+    color:white;
+    transition: all .2s;
+}
+
+.Button:hover,.Button:active{
+    color:#ff7730;
+    background-color: white;
+    border: 1px solid #ff7730;
+}
+
+
+
+.ShopItem h1{
+    font-size: larger;
+}
+
+.ShopItem img{
+    width: 200px;
+    margin: auto;
+}
+
+@media only screen and (max-width: 1500px){
+    .ShopItemWrapper{
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .ShopItemWrapper{
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .ShopItemWrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 60%;
+        height: auto;
+        padding: 0;
+        box-shadow:0 10px 20px #888888;
+    }
+    .ShopItem{
+        position: unset;
+        margin: 0;
+        box-shadow:none;
+    }
+    .ShopItem h1{
+        margin-bottom: 30px;
+    }
+    .BackShopItem{
+        transform: rotateY(0);
+        position: unset;
+        margin: 0;
+        box-shadow:none;
+    }
+    .ShopItemWrapper:hover .ShopItem{
+        transform: rotateY(0);
+    }
+    .Button{
+        margin: 30px auto;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .ShopItem img{
+        width: 100px;
+    }
+}

@@ -1,0 +1,95 @@
+.ProductAndImageWrapper{
+    width: 70%;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    margin-bottom:20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ProductAndImageWrapper:first-of-type{
+    margin-top: 2rem;
+}
+
+.ProductAndImageWrapper > img{
+    width: 50px;
+    margin: auto;
+}
+
+.ProductWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #edf7f6;
+}
+
+.Product{
+    width:70%;
+    padding: 10px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+
+
+.Amount{
+    margin: 10px auto;
+    background-color: white;
+    color:#ff7730;
+    font-weight: bolder;
+    padding: 10px 14px;
+    border:1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    border-radius: 4px;
+}
+
+.Button{
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #ff7730;
+    border: 1px solid #ff7730;
+    display: inline-block;
+    width: fit-content;
+    margin: auto;
+    padding: 15px;
+    box-sizing: border-box;
+    font-weight: bold;
+    color:white;
+    transition: all .2s;
+}
+
+.Button:hover,.Button:focus,.Button:active{
+    color:#ff7730;
+    background-color: white;
+    border: 1px solid #ff7730;
+}
+
+.Input{
+    width: 8%;
+    border:none;
+    border-bottom: 2px solid transparent;;
+    background-color: #f3f3f3;
+    transition: all .5s;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.Input:focus{
+    outline:none;
+    border-bottom: 2px solid #ff7730;
+    box-shadow: 0 1rem 2rem rgba(0,0,0, .25);
+}
+
+@media only screen and (max-width: 500px) {
+    .Input{
+        width: 33%;
+    }
+    .Button{
+        font-size: .7rem;
+    }
+}
