@@ -121,6 +121,8 @@
         position: unset;
         margin: 0;
         box-shadow:none;
+        transition: all 0s;
+
     }
     .ShopItemWrapper:hover .ShopItem{
         transform: rotateY(0);
