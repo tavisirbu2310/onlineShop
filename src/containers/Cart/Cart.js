@@ -73,7 +73,7 @@ class Cart extends Component {
                 let indexOf = cartTitles.indexOf(item.title);
                 axios.delete('https://ecommerce-e366c.firebaseio.com/cart/' + productsIDS[indexOf] + '.json')
                     .then(responseDelete => {
-                        if(amountNumber>0){
+                        if(amountNumber>=0){
                             let updatedItem = {...response.data,[item.id]:{...item, amount: inputCopy[indexOf]}};
                             if (productsIDS.length===1){
                                 updatedItem = {[item.id]:{...item, amount: inputCopy[indexOf]}};
